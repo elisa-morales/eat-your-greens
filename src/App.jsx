@@ -1,9 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import Home from "./pages/Home"
 //import axios from "axios"
-
-function Home() {
-  return <h1>ciao</h1>
-}
 
 function App() {
   return (
