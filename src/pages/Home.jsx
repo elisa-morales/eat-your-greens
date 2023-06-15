@@ -1,15 +1,24 @@
 import Footer from "../components/Footer"
-import Blob from "../components/Blob"
+import SearchBar from "../components/SearchBar"
 
 export default function Home() {
   return (
     <>
-      <div className="px-5">
-        <Blob />
+      <div className="flex flex-col items-center justify-center h-[calc(100vh-35px)] max-w-[540px] mx-auto my-auto px-5 text-center">
+        <h1 className="text-primary text-[40px] font-bold mb-5">Eat Your Greens!</h1>
+        <p className="py-4 text-justify max-sm:text-sm">
+          Welcome to <span className="bold">Eat Your Greens!</span>
+          <br />
+          <br />
+          Here you will find a wide selection of <span className="bold">vegetarian recipes</span> inspired by culinary traditions from around the world. Join us in the discovery of a world of <span className="bold">healthy and sustainable</span> dishes.
+          <br />
+          <br />
+          Enjoy your meal!
+        </p>
 
-        <h1>ciao</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, voluptas! Veniam modi maiores quos quia debitis quae, culpa similique magni cum dolores optio amet tempora. Voluptas at vel nulla illum!</p>
+        <SearchBar />
       </div>
+
       <Footer />
     </>
   )

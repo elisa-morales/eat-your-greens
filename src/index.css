@@ -3,6 +3,11 @@
 @tailwind utilities;
 
 @layer components {
+  .bold {
+    font-weight: 700;
+    color: #324a24;
+  }
+
   .waves {
     position: fixed;
     bottom: 0;
@@ -17,10 +22,22 @@
     right: 0;
     z-index: -10;
   }
+
+  .button {
+    background-color: #324a24;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+  }
+
+  .button:hover {
+    background-color: #961e1d;
+  }
 }
 
 :root {
   background-color: #f6efdd;
+  font-family: "Inter", sans-serif;
 }
 
 /*

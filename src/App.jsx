@@ -1,15 +1,20 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
+import Blob from "./assets/svg/Blob"
+import Waves from "./assets/svg/Waves"
+import Header from "./components/Header"
 import Home from "./pages/Home"
+
 //import axios from "axios"
 
 function App() {
   return (
     <BrowserRouter>
-      <Link to="/">Home</Link>
-
+      <Blob />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
+      <Waves />
     </BrowserRouter>
   )
 }
