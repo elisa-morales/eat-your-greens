@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom"
 import Blob from "./assets/svg/Blob"
 import Waves from "./assets/svg/Waves"
 import Header from "./components/Header"
+import Footer from "./components/Footer"
 import Home from "./pages/Home"
 
 //import axios from "axios"
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
       </Routes>
       <Waves />
+      <Footer />
     </BrowserRouter>
   )
 }

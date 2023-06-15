@@ -1,11 +1,9 @@
-import { Outlet } from "react-router-dom"
-
 export default function Footer() {
   return (
     <>
-      <footer className="fixed bottom-0">
+      <footer className="fixed bottom-0 -z-10">
         <div className="flex px-4 py-3.5 gap-4">
-          <p className="text-xs pt-1"> &#169; Elisa Morales </p>
+          <p className="text-xs pt-0.5"> &#169; Elisa Morales </p>
 
           <div className="flex gap-2 text-primary ">
             <a href="https://www.linkedin.com/in/elisa-morales-dev/" target="_blank">
@@ -22,8 +20,6 @@ export default function Footer() {
           </div>
         </div>
       </footer>
-
-      <Outlet />
     </>
   )
 }
