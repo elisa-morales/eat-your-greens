@@ -1,5 +1,3 @@
-import { Outlet } from "react-router-dom"
-
 export default function Header() {
   return (
     <>
@@ -9,7 +7,6 @@ export default function Header() {
           <i className=" bx bx-bookmark-heart  hover:text-hoverColor cursor-pointer"></i>
         </div>
       </header>
-      <Outlet />
     </>
   )
 }
