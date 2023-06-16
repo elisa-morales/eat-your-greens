@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 import axios from "axios"
 
 export default function Search() {
   const [recipes, setRecipes] = useState([])
   const url = import.meta.env.VITE_API_URL
   const key = import.meta.env.VITE_API_KEY
+  const { query } = useParams()
 
   useEffect(() => {
     fetchData()
@@ -12,7 +14,7 @@ export default function Search() {
 
   const fetchData = () => {
     axios
-      .get(`${url}/complexSearch?apiKey=${key}&query=egg`)
+      .get(`${url}/complexSearch?apiKey=${key}&query=${query}`)
       .then((res) => {
         setRecipes(res.data.results)
       })
