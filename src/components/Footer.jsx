@@ -2,7 +2,7 @@ export default function Footer() {
   return (
     <>
       <footer className="">
-        <div className="flex gap-3 fixed bottom-3 left-4">
+        <div className="flex gap-3 fixed bottom-0">
           <p className="text-xs pt-1"> &#169; Elisa Morales</p>
           <p>―</p>
 
