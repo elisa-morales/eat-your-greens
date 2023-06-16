@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
     <>
-      <footer className="fixed bottom-3 left-4 z-11">
-        <div className="flex gap-3">
+      <footer className="fixed bottom-0 -z-10">
+        <div className="flex gap-3 py-3.5 px-4">
           <p className="text-xs pt-1"> &#169; Elisa Morales</p>
           <p>―</p>
 
