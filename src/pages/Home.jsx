@@ -3,7 +3,7 @@ import SearchBar from "../components/SearchBar"
 export default function Home() {
   return (
     <>
-      <div className="flex flex-col items-center justify-center h-[calc(100vh-35px)] max-w-[540px] mx-auto my-auto px-5 text-center z-0">
+      <div className="flex flex-col items-center justify-center max-w-[540px] mx-auto my-auto px-5 text-center z-0">
         <h1 className="text-primary max-sm:text-[36px] text-[50px] font-bold mb-5">Eat Your Greens!</h1>
         <div className="bg-white p-6 rounded-md shadow-sm">
           <p className="text-justify max-sm:text-sm">
