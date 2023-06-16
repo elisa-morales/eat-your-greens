@@ -2,7 +2,7 @@ import SearchBar from "../components/SearchBar"
 
 export default function Hero() {
   return (
-    <div className="flex flex-col items-center justify-center h-[calc(100vh-100px)] max-w-[540px] mx-auto my-auto px-5 text-center">
+    <div className="mt-10 max-sm:mt-2 max-w-[540px] mx-auto my-auto px-5 text-center">
       <h1 className="text-primary max-sm:text-[36px] text-[50px] font-bold mb-5">Eat Your Greens!</h1>
       <div className="bg-white p-6 rounded-md shadow-sm">
         <p className="text-justify max-sm:text-sm">
