@@ -14,7 +14,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/search/:query" element={<Search />} />
       </Routes>
-      <Waves />
     </BrowserRouter>
   )
 }
