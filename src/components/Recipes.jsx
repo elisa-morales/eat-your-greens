@@ -37,7 +37,7 @@ export default function Recipes() {
       <div className="text-white shadow-sm">
         <i className="absolute top-5 right-5 text-2xl bx bx-heart cursor-pointer"></i>
         <Link to={`/recipe/${recipe.id}`}>
-          <h2 className="absolute bottom-5 left-5 pr-5 text-2xl font-semibold cursor-pointer">{recipe.title}</h2>
+          <h2 className="absolute bottom-5 left-5 pr-5  hover:text-accent text-2xl font-semibold cursor-pointer">{recipe.title}</h2>
         </Link>
       </div>
     </div>
