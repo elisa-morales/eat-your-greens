@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { Link, useParams } from "react-router-dom"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import axios from "axios"
 import defaultImage from "/src/assets/defaultImage.jpg"
 
@@ -11,6 +11,8 @@ export default function Recipes() {
   const [recipes, setRecipes] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState("")
+
+  const navigate = useNavigate()
 
   const fetchData = async () => {
     try {
@@ -44,8 +46,15 @@ export default function Recipes() {
   return (
     <div className="m-5">
       <div className="md:px-6 lg:px-10">
-        <h1 className="text-primary font-bold">Search results for "{query}"</h1>
-        <h2 className="mb-6">{recipes.length} results</h2>
+        <div className="md:flex md:justify-between">
+          <div>
+            <h1 className="text-primary font-bold">Search results for "{query}"</h1>
+            <h2 className="">{recipes.length} results</h2>
+          </div>
+          <button className="button mt-2 mb-6" onClick={() => navigate(-1)}>
+            Go back
+          </button>
+        </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10">{recipeElements}</div>
       </div>
     </div>
