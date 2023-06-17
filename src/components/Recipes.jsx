@@ -4,7 +4,7 @@ import axios from "axios"
 import defaultImage from "/src/assets/defaultImage.jpg"
 
 export default function Recipes() {
-  const url = import.meta.env.VITE_API_URL
+  const baseUrl = import.meta.env.VITE_API_URL
   const key = import.meta.env.VITE_API_KEY
   const { query } = useParams()
 
@@ -12,18 +12,17 @@ export default function Recipes() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState("")
 
-  const fetchData = () => {
-    axios
-      .get(`${url}/complexSearch?apiKey=${key}&query=${query}`)
-      .then((res) => {
+  const fetchData = async () => {
+    try {
+      const res = await axios.get(`${baseUrl}/complexSearch?apiKey=${key}&query=${query}`)
+      if (res) {
         setRecipes(res.data.results)
-      })
-      .catch((err) => {
-        setError(err)
-      })
-      .finally(() => {
-        setLoading(false)
-      })
+      }
+    } catch (err) {
+      setError(err)
+    } finally {
+      setLoading(false)
+    }
   }
 
   useEffect(() => {
