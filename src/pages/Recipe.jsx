@@ -1,12 +1,12 @@
 import Header from "../components/Header"
-import Recipes from "../components/Recipes"
+import RecipeDetail from "../components/RecipeDetail"
 import Footer from "../components/Footer"
 
-export default function Search() {
+export default function Recipe() {
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
-      <Recipes />
+      <RecipeDetail />
       <Footer />
     </div>
   )

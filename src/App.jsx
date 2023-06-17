@@ -3,8 +3,7 @@ import Blob from "./assets/svg/Blob"
 import Waves from "./assets/svg/Waves"
 import Home from "./pages/Home"
 import Search from "./pages/Search"
-
-//import axios from "axios"
+import Recipe from "./pages/Recipe"
 
 function App() {
   return (
@@ -13,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/search/:query" element={<Search />} />
+        <Route path="/recipe/:id" element={<Recipe />} />
       </Routes>
       <Waves />
     </BrowserRouter>
