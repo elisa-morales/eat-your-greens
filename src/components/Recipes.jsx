@@ -33,6 +33,7 @@ export default function Recipes() {
   }
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     fetchData()
   }, [])
 
