@@ -15,7 +15,7 @@ export default function useApi(id) {
         setRecipeData(res.data)
       }
     } catch (error) {
-      alert(`Something went wrong: ${error}`)
+      console.log(`Something went wrong: ${error}`)
     } finally {
       setLoading(false)
     }

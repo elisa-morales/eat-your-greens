@@ -26,7 +26,7 @@ export default function Recipes() {
         setRecipes(res.data.results)
       }
     } catch (error) {
-      alert(`Something went wrong: ${error}`)
+      console.log(`Something went wrong: ${error}`)
     } finally {
       setLoading(false)
     }
@@ -57,11 +57,15 @@ export default function Recipes() {
             Go back
           </button>
           <div>
-            <h1 className="text-primary font-bold">Search results for "{query}"</h1>
+            <h1 className="text-primary font-bold ">Search results for "{query}"</h1>
             <h2 className="md:text-right mb-5">{recipes.length} results</h2>
           </div>
         </div>
-        {recipes.length === 0 && loading === false && <div className="text-sm">No recipes founded.</div>}
+        {recipes.length === 0 && loading === false && (
+          <div className="text-sm">
+            <p className="">No recipes founded.</p>
+          </div>
+        )}
 
         {recipes.length > 0 && <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10">{recipeElements}</div>}
       </div>

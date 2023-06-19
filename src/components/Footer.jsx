@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <>
-      <footer className="flex gap-3 py-3.5 px-4">
+      <footer className="flex mt-auto gap-3 py-3.5 px-4">
         <p className="text-xs pt-1"> &#169; Elisa Morales</p>
         <p>―</p>
 

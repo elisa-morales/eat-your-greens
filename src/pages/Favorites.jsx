@@ -1,3 +1,12 @@
+import Header from "../components/Header"
+import Footer from "../components/Footer"
+
 export default function Favorites() {
-  return <h1>fab</h1>
+  return (
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <p>fab</p>
+      <Footer />
+    </div>
+  )
 }
