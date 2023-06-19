@@ -61,7 +61,7 @@ export default function Recipes() {
             <h2 className="md:text-right mb-5">{recipes.length} results</h2>
           </div>
         </div>
-        {recipes.length === 0 && loading === false && <div>No recipes founded.</div>}
+        {recipes.length === 0 && loading === false && <div className="text-sm">No recipes founded.</div>}
 
         {recipes.length > 0 && <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10">{recipeElements}</div>}
       </div>
