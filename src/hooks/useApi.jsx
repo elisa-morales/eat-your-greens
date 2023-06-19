@@ -7,7 +7,6 @@ export default function useApi(id) {
 
   const [recipeData, setRecipeData] = useState([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState("")
 
   const fetchSingleRecipe = async () => {
     try {
@@ -15,16 +14,17 @@ export default function useApi(id) {
       if (res) {
         setRecipeData(res.data)
       }
-    } catch (err) {
-      setError(err)
+    } catch (error) {
+      alert(`Something went wrong: ${error}`)
     } finally {
       setLoading(false)
     }
   }
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     fetchSingleRecipe()
   }, [id])
 
-  return { recipeData, loading, error }
+  return { recipeData, loading }
 }

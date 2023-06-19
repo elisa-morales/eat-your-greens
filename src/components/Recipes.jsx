@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import axios from "axios"
+import ClipLoader from "react-spinners/ClipLoader"
 import defaultImage from "/src/assets/defaultImage.jpg"
 
 export default function Recipes() {
@@ -10,9 +11,13 @@ export default function Recipes() {
 
   const [recipes, setRecipes] = useState([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState("")
 
   const navigate = useNavigate()
+
+  const override = {
+    display: "block",
+    margin: "250px auto",
+  }
 
   const fetchData = async () => {
     try {
@@ -20,8 +25,8 @@ export default function Recipes() {
       if (res) {
         setRecipes(res.data.results)
       }
-    } catch (err) {
-      setError(err)
+    } catch (error) {
+      alert(`Something went wrong: ${error}`)
     } finally {
       setLoading(false)
     }
@@ -45,17 +50,20 @@ export default function Recipes() {
 
   return (
     <div className="m-5">
+      {recipes.length === 0 && loading === true && <ClipLoader color="#324a24" cssOverride={override} />}
       <div className="md:px-6 lg:px-10">
-        <div className="md:flex md:justify-between">
-          <div>
-            <h1 className="text-primary font-bold">Search results for "{query}"</h1>
-            <h2 className="">{recipes.length} results</h2>
-          </div>
-          <button className="button mt-2 mb-6" onClick={() => navigate(-1)}>
+        <div className="md:flex md:justify-between items-start">
+          <button className="button mb-2 md:my-2" onClick={() => navigate(-1)}>
             Go back
           </button>
+          <div>
+            <h1 className="text-primary font-bold">Search results for "{query}"</h1>
+            <h2 className="md:text-right mb-5">{recipes.length} results</h2>
+          </div>
         </div>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10">{recipeElements}</div>
+        {recipes.length === 0 && loading === false && <div>No recipes founded.</div>}
+
+        {recipes.length > 0 && <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3 lg:gap-10">{recipeElements}</div>}
       </div>
     </div>
   )
