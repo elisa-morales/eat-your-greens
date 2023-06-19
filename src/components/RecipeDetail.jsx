@@ -27,7 +27,7 @@ export default function RecipeDetail() {
 
       {recipeData && Object.keys(recipeData).length > 0 && (
         <div className="m-5 sm:shadow-sm lg:shadow-none grid lg:grid-cols-2 lg:gap-8" key={recipeData.id}>
-          <img className="rounded-t-md lg:rounded-md lg:shadow-sm" src={defaultImage} />
+          <img className="rounded-t-md lg:rounded-md lg:shadow-sm" src={recipeData.image ? recipeData.image : defaultImage} />
 
           <div className="bg-white p-5 md:px-6 lg:px-10 rounded-b-md lg:rounded-md lg:shadow-sm">
             <div className="text-primary flex justify-between">
@@ -41,7 +41,7 @@ export default function RecipeDetail() {
               {recipeData.dairyFree === true ? <div className="label">Dairy free</div> : null}
             </div>
 
-            <div className="p-2 text-sm">
+            <div className="py-2 text-sm">
               <p className="my-2">
                 <span className="bold">
                   <i className="bx bxs-time-five"></i> Time:
