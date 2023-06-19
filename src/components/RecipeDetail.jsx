@@ -1,15 +1,34 @@
+import { useContext, useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import useApi from "../hooks/useApi"
 import defaultImage from "/src/assets/defaultImage.jpg"
 import ClipLoader from "react-spinners/ClipLoader"
 import Ingredients from "./Ingredients"
 import Instructions from "./Instructions"
+import { FavoritesContext } from "../context/FavoritesContext"
 
 export default function RecipeDetail() {
   const { id } = useParams()
   const { recipeData, loading } = useApi(id)
 
+  const { favorites, addToFavorites, removeFromFavorites } = useContext(FavoritesContext)
+  const [isFavorite, setIsFavorite] = useState(false)
   const navigate = useNavigate()
+
+  function toggleFavorite() {
+    if (isFavorite) {
+      removeFromFavorites(recipeData.id)
+    } else if (!isFavorite) {
+      addToFavorites(recipeData.id, recipeData.title, recipeData.image)
+    }
+    setIsFavorite(!isFavorite)
+  }
+
+  useEffect(() => {
+    favorites.find((item) => item.id === Number(id)) ? setIsFavorite(true) : setIsFavorite(false)
+  }, [favorites, id])
+
+  const heartIcon = isFavorite ? "bx bxs-heart" : "bx bx-heart"
 
   const override = {
     display: "block",
@@ -32,7 +51,7 @@ export default function RecipeDetail() {
           <div className="bg-white p-5 md:px-6 lg:px-10 rounded-b-md lg:rounded-md lg:shadow-sm">
             <div className="text-primary flex justify-between">
               <h1 className="max-sm:text-[36px] text-[50px] font-bold">{recipeData.title}</h1>
-              <i className="text-2xl bx bx-heart cursor-pointer"></i>
+              <i className={`${heartIcon} text-2xl cursor-pointer`} onClick={toggleFavorite}></i>
             </div>
 
             <div className="pt-2 flex flex-wrap gap-2 text-sm">
@@ -42,17 +61,11 @@ export default function RecipeDetail() {
             </div>
 
             <div className="py-2 text-sm">
-              <p className="my-2">
-                <span className="bold">
-                  <i className="bx bxs-time-five"></i> Time:
-                </span>{" "}
-                {recipeData.readyInMinutes} minutes
+              <p className="my-2 bold">
+                <i className="bx bxs-time-five"></i> ready in {recipeData.readyInMinutes} minutes
               </p>
-              <p>
-                <span className="bold">
-                  <i className="bx bxs-bowl-hot"></i> Servings:
-                </span>{" "}
-                {recipeData.servings}
+              <p className="bold">
+                <i className="bx bxs-bowl-hot"></i> {recipeData.servings} servings
               </p>
             </div>
 

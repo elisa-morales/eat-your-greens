@@ -39,13 +39,12 @@ export default function Recipes() {
 
   const recipeElements = recipes.map((recipe) => (
     <div key={recipe.id} className="relative flex flex-col justify-center rounded-md shadow-sm">
-      <img className="brightness-50 rounded-md" src={recipe.image ? recipe.image : defaultImage} />
-      <div className="text-white shadow-sm">
-        <i className="absolute top-5 right-5 text-2xl bx bx-heart cursor-pointer"></i>
-        <Link to={`/recipe/${recipe.id}`}>
+      <Link to={`/recipe/${recipe.id}`}>
+        <img className="brightness-50 rounded-md" src={recipe.image ? recipe.image : defaultImage} />
+        <div className="text-white shadow-sm">
           <h2 className="absolute bottom-5 left-5 pr-5  hover:text-accent text-2xl font-semibold cursor-pointer">{recipe.title}</h2>
-        </Link>
-      </div>
+        </div>
+      </Link>
     </div>
   ))
 
