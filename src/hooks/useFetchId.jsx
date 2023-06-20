@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 
-export default function useApi(id) {
+export default function useFetchId(id) {
   const baseUrl = import.meta.env.VITE_API_URL
   const key = import.meta.env.VITE_API_KEY
 
