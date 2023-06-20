@@ -1,19 +1,20 @@
 import { useContext, useEffect, useState } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import useApi from "../hooks/useApi"
-import defaultImage from "/src/assets/defaultImage.jpg"
+import useDefaultImage from "../hooks/useDefaultImage"
 import ClipLoader from "react-spinners/ClipLoader"
 import Ingredients from "./Ingredients"
 import Instructions from "./Instructions"
 import { FavoritesContext } from "../context/FavoritesContext"
 
-export default function RecipeDetail() {
+export default function RecipeElement() {
   const { id } = useParams()
   const { recipeData, loading } = useApi(id)
 
   const { favorites, addToFavorites, removeFromFavorites } = useContext(FavoritesContext)
   const [isFavorite, setIsFavorite] = useState(false)
   const navigate = useNavigate()
+  const { replaceImage } = useDefaultImage()
 
   function toggleFavorite() {
     if (isFavorite) {
@@ -46,7 +47,7 @@ export default function RecipeDetail() {
 
       {recipeData && Object.keys(recipeData).length > 0 && (
         <div className="m-5 sm:shadow-sm lg:shadow-none grid lg:grid-cols-2 lg:gap-8" key={recipeData.id}>
-          <img className="rounded-t-md lg:rounded-md lg:shadow-sm" src={recipeData.image ? recipeData.image : defaultImage} />
+          <img className="rounded-t-md lg:rounded-md lg:shadow-sm" src={recipeData} onError={replaceImage} />
 
           <div className="bg-white p-5 md:px-6 lg:px-10 rounded-b-md lg:rounded-md lg:shadow-sm">
             <div className="text-primary flex justify-between">

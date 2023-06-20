@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
+import useDefaultImage from "../hooks/useDefaultImage"
 import { Link, useNavigate, useParams } from "react-router-dom"
 import axios from "axios"
 import ClipLoader from "react-spinners/ClipLoader"
-import defaultImage from "/src/assets/defaultImage.jpg"
 
 export default function Recipes() {
   const baseUrl = import.meta.env.VITE_API_URL
@@ -11,8 +11,8 @@ export default function Recipes() {
 
   const [recipes, setRecipes] = useState([])
   const [loading, setLoading] = useState(true)
-
   const navigate = useNavigate()
+  const { replaceImage } = useDefaultImage()
 
   const override = {
     display: "block",
@@ -38,11 +38,13 @@ export default function Recipes() {
   }, [])
 
   const recipeElements = recipes.map((recipe) => (
-    <div key={recipe.id} className="relative flex flex-col justify-center rounded-md shadow-sm">
+    <div key={recipe.id}>
       <Link to={`/recipe/${recipe.id}`}>
-        <img className="brightness-50 rounded-md" src={recipe.image ? recipe.image : defaultImage} />
-        <div className="text-white shadow-sm">
-          <h2 className="absolute bottom-5 left-5 pr-5  hover:text-accent text-2xl font-semibold cursor-pointer">{recipe.title}</h2>
+        <div className="relative flex flex-col justify-center rounded-md shadow-sm">
+          <img className="brightness-50 rounded-md" src={recipe.image} onError={replaceImage} />
+          <div className="text-white shadow-sm">
+            <h2 className="absolute bottom-5 left-5 pr-5  hover:text-accent text-2xl font-semibold cursor-pointer">{recipe.title}</h2>
+          </div>
         </div>
       </Link>
     </div>
