@@ -13,17 +13,31 @@ export default function Recipes() {
     margin: "200px auto",
   }
 
-  const recipeElements = recipes.map((recipe) => <Card key={recipe.id} id={recipe.id} image={recipe.image} title={recipe.title} />)
+  const recipeElements = recipes.map((recipe) => 
+    <Card 
+      key={recipe.id} 
+      id={recipe.id} 
+      image={recipe.image} 
+      title={recipe.title} 
+    />
+  )
 
   return (
     <div className="m-5 md:px-6 lg:px-10">
-      {recipes.length === 0 && loading === true && <ClipLoader color="#324a24" cssOverride={override} />}
+      {recipes.length === 0 && 
+      loading === true && 
+      <ClipLoader 
+        color="#324a24" 
+        cssOverride={override} 
+      />
+      }
 
-      {recipes.length === 0 && loading === false && (
+      {recipes.length === 0 &&
+      loading === false && (
         <div>
           <GoBackBtn />
-          <div className="my-5 text-sm">
-            <p>No recipes founded.</p>
+          <div className="my-5">
+            <p className="text-sm">No recipes founded.</p>
           </div>
         </div>
       )}

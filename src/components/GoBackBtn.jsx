@@ -4,7 +4,8 @@ export default function GoBackBtn() {
   const navigate = useNavigate()
 
   return (
-    <button className="button mb-2 md:my-2" onClick={() => navigate(-1)}>
+    <button className="button mb-2 md:my-2"
+      onClick={() => navigate(-1)}>
       Go back
     </button>
   )

@@ -4,7 +4,6 @@ import axios from "axios"
 export default function useFetchId(id) {
   const baseUrl = import.meta.env.VITE_API_URL
   const key = import.meta.env.VITE_API_KEY
-
   const [recipeData, setRecipeData] = useState([])
   const [loading, setLoading] = useState(true)
 

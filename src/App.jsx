@@ -6,6 +6,7 @@ import Search from "./pages/Search"
 import Recipe from "./pages/Recipe"
 import Favorites from "./pages/Favorites"
 import FavoritesContextProvider from "./context/FavoritesContext"
+import NotFound from "./pages/NotFound"
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/search/:query" element={<Search />} />
           <Route path="/recipe/:id" element={<Recipe />} />
           <Route path="/favorites" element={<Favorites />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
         <Waves />
       </FavoritesContextProvider>

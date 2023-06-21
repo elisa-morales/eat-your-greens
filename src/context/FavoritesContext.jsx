@@ -24,5 +24,12 @@ export default function FavoritesContextProvider({ children }) {
     localStorage.setItem("Favorites", JSON.stringify(favorites))
   }, [favorites])
 
-  return <FavoritesContext.Provider value={{ favorites, addToFavorites, removeFromFavorites }}>{children}</FavoritesContext.Provider>
+  return <FavoritesContext.Provider 
+    value={{ 
+      favorites, 
+      addToFavorites, 
+      removeFromFavorites 
+    }}>
+      {children}
+      </FavoritesContext.Provider>
 }

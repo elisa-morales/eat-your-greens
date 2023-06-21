@@ -14,7 +14,6 @@ export default function Hero() {
           <br />
           Enjoy your meal!
         </p>
-
         <SearchBar />
       </div>
     </div>
