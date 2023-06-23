@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { FavoritesContext } from "../context/FavoritesContext"
+import defaultImage from "/src/assets/defaultImage.jpg"
 import GoBackBtn from "./GoBackBtn"
 import CardFavorite from "./CardFavorite"
 
@@ -10,7 +11,10 @@ export default function FavoriteElement() {
     <CardFavorite
       key={favorite.id} 
       id={favorite.id} 
-      image={favorite.image} 
+      image={favorite.image 
+        ? favorite.image
+        : defaultImage
+      } 
       title={favorite.name} 
     />)
 
