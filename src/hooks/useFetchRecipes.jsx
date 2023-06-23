@@ -9,7 +9,7 @@ export default function useFetchRecipes(query) {
 
   const fetchData = async () => {
     try {
-      const res = await axios.get(`${baseUrl}/complexSearch?apiKey=${key}&query=${query}&diet=vegetarian`)
+      const res = await axios.get(`${baseUrl}/complexSearch?apiKey=${key}&query=${query}&diet=vegetarian&number=12`)
       if (res) {
         setRecipes(res.data.results)
       }

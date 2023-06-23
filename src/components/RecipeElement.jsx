@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import useFetchId from "../hooks/useFetchId"
 import useDefaultImage from "../hooks/useDefaultImage"
+import defaultImage from "/src/assets/defaultImage.jpg"
 import ClipLoader from "react-spinners/ClipLoader"
 import GoBackBtn from "./GoBackBtn"
 import Ingredients from "./Ingredients"
@@ -64,7 +65,10 @@ export default function RecipeElement() {
         >
         
         <img className="rounded-t-md lg:rounded-md lg:shadow-sm w-full"
-            src={recipeData.image}
+            src={recipeData.image
+              ? recipeData.image
+              : defaultImage
+            }
             onError={replaceImage} 
           />
 
