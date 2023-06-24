@@ -17,6 +17,16 @@ iPhone SE (375 x 667):
 
 <img src="https://github.com/elisa-morales/eat-your-greens/blob/main/screenshots/mobile-recipe.png" width="257px"> <img src="https://github.com/elisa-morales/eat-your-greens/blob/main/screenshots/mobile-favorites.png" width="257px">
 
+Nest Hub Max (1280 x 800):
+
+<img src="https://github.com/elisa-morales/eat-your-greens/blob/main/screenshots/laptop-home.png" width="600px">
+
+<img src="https://github.com/elisa-morales/eat-your-greens/blob/main/screenshots/laptop-search.png" width="600px">
+
+<img src="https://github.com/elisa-morales/eat-your-greens/blob/main/screenshots/laptop-recipe.png" width="600px">
+
+<img src="https://github.com/elisa-morales/eat-your-greens/blob/main/screenshots/laptop-favorites.png" width="600px">
+
 # Link 
 * Netlify URL: [<a href="https://eatyourgreens.netlify.app/" target="_blank">https://eatyourgreens.netlify.app/</a>]
  
