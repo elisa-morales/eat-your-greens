@@ -1,5 +1,6 @@
 # Indice
 * <a href="https://github.com/elisa-morales/eat-your-greens#descrizione">Descrizione</a>
+<a href="https://github.com/elisa-morales/eat-your-greens#tecnologie-utilizzate">Tecnologie utilizzate</a>
 * <a href="https://github.com/elisa-morales/eat-your-greens#screenshots">Screenshots</a>
 * <a href="https://github.com/elisa-morales/eat-your-greens#link">Link</a>
 
@@ -8,6 +9,13 @@
 <i>Eat Your Greens!</i> è un'applicazione di ricette vegetariane che sfrutta l'API di <a href="https://spoonacular.com/food-api" target="_blank">Spoonacular</a>. 
 
 Il sito si compone di una home page che invita alla ricerca di ricette per mezzo di una search bar, di una pagina in cui è possibile consultare rapidamente i risultati, una pagina dedicata alla singola ricetta dove vengono mostrati ingredienti e preparazione, e una pagina dei preferiti addetta al salvataggio delle proprie ricette preferite.
+
+# Tecnologie utilizzate
+* [TailwindCSS](https://tailwindcss.com/)
+* [React.js](https://react.dev/)
+* [React Router](https://reactrouter.com/en/main)
+* [React Spinners](https://www.npmjs.com/package/react-spinners)
+* [Axios](https://axios-http.com/)
 
 # Screenshots
 
