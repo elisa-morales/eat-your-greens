@@ -13,8 +13,8 @@ Il sito si compone di una home page che invita alla ricerca di ricette per mezzo
 
 iPhone SE (375 x 667):
 
-<img src="https://github.com/elisa-morales/eat-your-greens/blob/main/screenshots/mobile-home.png"> <img src="https://github.com/elisa-morales/eat-your-greens/blob/main/screenshots/mobile-search.png">
-<img src="https://github.com/elisa-morales/eat-your-greens/blob/main/screenshots/mobile-recipe.png"> <img src="https://github.com/elisa-morales/eat-your-greens/blob/main/screenshots/mobile-favorites.png">
+<img src="https://github.com/elisa-morales/eat-your-greens/blob/main/screenshots/mobile-home.png" width="257px"> <img src="https://github.com/elisa-morales/eat-your-greens/blob/main/screenshots/mobile-search.png" width="257px">
+<img src="https://github.com/elisa-morales/eat-your-greens/blob/main/screenshots/mobile-recipe.png" width="257px"> <img src="https://github.com/elisa-morales/eat-your-greens/blob/main/screenshots/mobile-favorites.png" width="257px">
 
 # Link 
 * Netlify URL: [<a href="https://eatyourgreens.netlify.app/" target="_blank">https://eatyourgreens.netlify.app/</a>]
