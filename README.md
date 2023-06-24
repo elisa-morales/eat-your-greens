@@ -1,6 +1,6 @@
 # Indice
 * <a href="https://github.com/elisa-morales/eat-your-greens#descrizione">Descrizione</a>
-<a href="https://github.com/elisa-morales/eat-your-greens#tecnologie-utilizzate">Tecnologie utilizzate</a>
+* <a href="https://github.com/elisa-morales/eat-your-greens#tecnologie-utilizzate">Tecnologie utilizzate</a>
 * <a href="https://github.com/elisa-morales/eat-your-greens#screenshots">Screenshots</a>
 * <a href="https://github.com/elisa-morales/eat-your-greens#link">Link</a>
 
