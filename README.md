@@ -16,6 +16,7 @@ Il sito si compone di una home page che invita alla ricerca di ricette per mezzo
 * [React Router](https://reactrouter.com/en/main)
 * [React Spinners](https://www.npmjs.com/package/react-spinners)
 * [Axios](https://axios-http.com/)
+* [Vite](https://vitejs.dev/)
 
 # Screenshots
 
