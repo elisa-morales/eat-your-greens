@@ -8,7 +8,7 @@
 
 <i>Eat Your Greens!</i> è un'applicazione di ricette vegetariane che sfrutta l'API di <a href="https://spoonacular.com/food-api" target="_blank">Spoonacular</a>. 
 
-Il sito si compone di una home page che invita alla ricerca di ricette per mezzo di una search bar, di una pagina in cui è possibile consultare rapidamente i risultati, una pagina dedicata alla singola ricetta dove vengono mostrati ingredienti e preparazione, e una pagina dei preferiti addetta al salvataggio delle proprie ricette preferite.
+Il sito si compone di una home page che invita alla ricerca di ricette attraverso una search bar, di una pagina in cui è possibile consultare rapidamente i risultati relativi alla keyword cercata, una pagina dedicata alla singola ricetta dove vengono mostrati ingredienti e preparazione, e una pagina dei preferiti addetta al salvataggio delle proprie ricette preferite.
 
 # Tecnologie utilizzate
 * [TailwindCSS](https://tailwindcss.com/)
