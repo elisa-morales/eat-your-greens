@@ -10,6 +10,7 @@ import NotFound from "./pages/NotFound"
 
 function App() {
   return (
+    <div className="flex flex-col min-h-screen">
     <BrowserRouter>
       <FavoritesContextProvider>
         <Blob />
@@ -23,6 +24,7 @@ function App() {
         <Waves />
       </FavoritesContextProvider>
     </BrowserRouter>
+    </div>
   )
 }
 

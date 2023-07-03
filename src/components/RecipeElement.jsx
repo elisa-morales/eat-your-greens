@@ -44,14 +44,14 @@ export default function RecipeElement() {
         <GoBackBtn />
       </div>
 
-      {loading === true &&
+      {loading &&
       <ClipLoader
         color="#324a24"
         cssOverride={override}
       />
       }
 
-      {loading === false && 
+      {!loading && 
         recipeData && 
         Object.keys(recipeData).length === 0 && 
         <div className="m-5 text-sm">No data received. Reload the page or come back later.

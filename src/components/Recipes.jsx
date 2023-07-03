@@ -25,7 +25,7 @@ export default function Recipes() {
   return (
     <div className="m-5 md:px-6 lg:px-10">
       {recipes.length === 0 && 
-      loading === true && 
+      loading && 
       <ClipLoader 
         color="#324a24" 
         cssOverride={override} 
@@ -33,7 +33,7 @@ export default function Recipes() {
       }
 
       {recipes.length === 0 &&
-      loading === false && (
+      !loading && (
         <div>
           <GoBackBtn />
           <div className="my-5">

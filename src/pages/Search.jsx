@@ -4,10 +4,10 @@ import Footer from "../components/Footer"
 
 export default function Search() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <>
       <Header />
       <Recipes />
       <Footer />
-    </div>
+    </>
   )
 }
