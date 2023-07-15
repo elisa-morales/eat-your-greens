@@ -2,6 +2,7 @@
 * <a href="https://github.com/elisa-morales/eat-your-greens#descrizione">Descrizione</a>
 * <a href="https://github.com/elisa-morales/eat-your-greens#tecnologie-utilizzate">Tecnologie utilizzate</a>
 * <a href="https://github.com/elisa-morales/eat-your-greens#screenshots">Screenshots</a>
+* <a href="https://github.com/elisa-morales/eat-your-greens#setup">Setup</a>
 * <a href="https://github.com/elisa-morales/eat-your-greens#link">Link</a>
 
 # Descrizione
@@ -35,6 +36,24 @@ Nest Hub Max (1280 x 800):
 <img src="https://github.com/elisa-morales/eat-your-greens/blob/main/screenshots/laptop-recipe.png" width="600px">
 
 <img src="https://github.com/elisa-morales/eat-your-greens/blob/main/screenshots/laptop-favorites.png" width="600px">
+
+# Setup
+
+Per prima cosa, hai bisogno di aver installato [Node.js](https://nodejs.org/it/download). A questo punto esegui i seguenti passaggi nel tuo terminale:
+
+```
+# clona la repository 
+$ git clone https://github.com/elisa-morales/eat-your-greens
+
+# spostati all'interno della repository
+$ cd eat-your-greens
+
+# installa le dipendenze
+$ npm install
+
+# avvia l'applicazione
+$ npm run dev
+```
 
 # Link 
 * Netlify URL: [<a href="https://eatyourgreens.netlify.app/" target="_blank">https://eatyourgreens.netlify.app/</a>]
